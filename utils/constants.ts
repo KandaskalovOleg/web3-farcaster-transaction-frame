@@ -7,4 +7,4 @@ export const CLIENT = createThirdwebClient({
 
 export const CHAIN = defineChain( optimism );
 
-export const erc721ContractAddress = process.env.CONTRACT_ADRESS as string;
+export const erc721ContractAddress = process.env.CONTRACT_ADDRESS as string;

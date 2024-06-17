@@ -1,10 +1,10 @@
 import { encode, getContract } from "thirdweb";
 import { CHAIN, CLIENT, erc721ContractAddress } from "./constants";
 import { claimTo } from "thirdweb/extensions/erc721";
-import { FrameValidationData } from "@coinbase/onchainkit/frame";
+import { FrameValidationData } from "@coinbase/onchainkit/core";
 
 export const getERC721PreparedEncodedData = async (
-  walletAdress : string,
+  walletAddress : string,
 ) => {
   const contract = getContract({
     client: CLIENT,
@@ -14,7 +14,7 @@ export const getERC721PreparedEncodedData = async (
 
   const tx = claimTo({
     contract: contract,
-    to: walletAdress,
+    to: walletAddress,
     quantity: BigInt(1),
   });
 
